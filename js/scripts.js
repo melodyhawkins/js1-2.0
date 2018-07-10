@@ -4,5 +4,5 @@ console.log(firstName);
 let lastName = prompt("What is your last name?");
 alert(lastName);
 let birthday = prompt("What is your birthday?", new Date('10/6/1976'));
-confirm(`Is ${birthday} your birthday?`);
-alert(birthday);
+let confirmBday = confirm(`Is ${birthday} your birthday?`);
+if(confirmBday) alert(`${birthday} is in fact your birthday!`);
