@@ -1,3 +1,4 @@
+//Takehome-day3
 let userName = prompt("What is your name?");
 let favColor = prompt("What is your favorite color?", "red, orange, yellow, green, blue, pink, purple, black, white, or grey");
 switch(favColor.toLowerCase()){
@@ -35,3 +36,12 @@ switch(favColor.toLowerCase()){
     alert(`Ummm ${userName}, you did not enter a valid color. Please try again.`);
     break;
 }
+
+//Takehome-Day2
+let firstName = prompt("What is your first name?");
+console.log(firstName);
+let lastName = prompt("What is your last name?");
+alert(lastName);
+let birthday = prompt("What is your birthday?", new Date('10/6/1976'));
+confirm(`Is ${birthday} your birthday?`);
+alert(birthday);
