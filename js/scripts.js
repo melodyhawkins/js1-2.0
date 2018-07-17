@@ -107,6 +107,7 @@ let multiDimentional = [['hello', 1], ['goodbye', 0]];
 console.log(multiDimentional[0][0], multiDimentional[1][0]);
 
 //Try it out #2
+/*
 let favMovies = [];
 let fav1 = ['Gone with the Wind', 'Vivien Leigh'];
 let fav2 = ['My Cousin Vinny', 'Maresia Tomei'];
@@ -126,3 +127,68 @@ favAndLeast.push(favMovies[0], favMovies[4]);
 console.log(favAndLeast);
 
 alert(favMovies.length);
+*/
+
+//LOOPS - if the condition is false then the loop will not run.
+
+//For Loops - setting variable, condition and incrementor all in the same spot. Considered good practice to start your loops at 0. More common.
+for(let i=0; i < 11; i++){
+  console.log(`The number is ${i * 10}`);
+}
+
+const colors = ['blue', 'purple', 'red', 'aquamarine', 'chartreuse', 'lavender'];
+for(let index=0; index < colors.length; index++){
+  console.log(colors[index]);
+  continue;//will not see the code after - ends the block of code but don't go forward, but runs it again from the beginning.
+  console.log('why can\'t you see me');
+  //if( index === 1) break; - ends the loop
+}
+
+//While Loops - declare variable first.
+let counter = 0;
+while(counter < 5) {
+  console.log(`before ${counter}`);
+  counter++;
+  console.log(`after ${counter}`);
+}
+
+//For Each Loop - commonly used. Runs the code one time for each member of the array. When there are two variables, the first is the value and the second is the index. Allows you to easily get the index.
+/*
+const captains = ['Kirk', 'Picard', 'Sisko', 'Janeway', 'Lorca'];
+captains.forEach((captain, index) => {  //fat arrow function.
+  console.log(captain, index);
+})
+*/
+
+
+//For Of Loop - a little fancier way of doing for each that will be seen in ANGULAR. If you only want the value, it can be super useful. For ARRAYS.
+const captains = ['Kirk', 'Picard', 'Sisko', 'Janeway', 'Lorca'];
+for(let captain of captains) { //The first variable can be named anything and is the value. The second variable has to match the array.
+  console.log(`Hello Captain ${captain}`);
+}
+
+//For In Loop - for objects - DO NOT USE WITH ARRAYS - will see it once in a while.
+const me = {
+  firstName: 'J.R.',
+  lastName: 'Ruggiero',
+  age: 39
+};
+for (let property in me) {
+  console.log(me[property]);
+}
+
+//Try it out #3
+
+let favMovies = [];
+let fav1 = ['Gone with the Wind', 'Vivien Leigh'];
+let fav2 = ['My Cousin Vinny', 'Maresia Tomei'];
+let fav3 = ['Any Given Sunday', 'Cameron Diaz'];
+let fav4 = ['Girls Just Want to Have Fun', 'Sarah Jessica Parker'];
+let fav5 = ['Two Weeks Notice', 'Sandra Bullock'];
+
+favMovies.push(fav1, fav2, fav3, fav4, fav5);
+
+for(let index=0; index < favMovies.length; index++){
+  if(favMovies[index][1] = "My Cousin Vinny")
+  alert(`${favMovies[index][1]} ${favMovies[index][2]}`);
+}
