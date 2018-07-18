@@ -1,3 +1,14 @@
+//day5-takehome
+function dogAge(ageOfDogYears) {
+  if(!isNaN(ageOfDogYears)){
+    return ageOfDogYears * 7;
+  }
+  else {
+    dogAge(parseInt(prompt("What is your dog's age in years?", "10")))
+  }
+};
+alert(dogAge(parseInt(prompt("What is your dog's age in years?", "10"))));
+
 //Takehome-day3
 let userName = prompt("What is your name?");
 let favColor = prompt("What is your favorite color?", "red, orange, yellow, green, blue, pink, purple, black, white, or grey");
@@ -45,3 +56,4 @@ alert(lastName);
 let birthday = prompt("What is your birthday?", new Date('10/6/1976'));
 confirm(`Is ${birthday} your birthday?`);
 alert(birthday);
+
