@@ -1,3 +1,4 @@
+//day5-takehome
 function dogAge(ageOfDogYears) {
   if(!isNaN(ageOfDogYears)){
     return ageOfDogYears * 7;
@@ -20,5 +21,5 @@ function lifetimeCalculator(age, dailyUse) {
 };
 let userAge = prompt('how old are you?', '41');
 let userUse = prompt("How much do you use every day?", '1');
-let usage = lifetimeCalculator(parseInt(userAge), parseInt(userUse)); 
+let usage = lifetimeCalculator(parseInt(userAge), parseInt(userUse));
 alert(`You will need ${usage} to last until you're 80.`);
