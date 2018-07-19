@@ -85,3 +85,8 @@ string => (string.toUpperCase()); //ANYTHING IN THE () SHOULD BE IMMEDIATELY RET
 string => string.toUpperCase(); // also correct
 
 //Day5 Try it out = takehome.
+
+//Day 5 Continued....
+//METHOD V. FUNCTION 
+//all methods are functions. not all functions are methods.
+//the method is connected to the objec. dx. console.log(); string.toUpperCase
