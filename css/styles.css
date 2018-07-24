@@ -1,0 +1,24 @@
+#red_bg {
+  background-color: #e40007;
+}
+.white-text{
+  color: #fff;
+}
+.blue-bg{
+  background-color: #0000FF;
+}
+.green-bg{
+  background-color: #00FF00;
+}
+.purple-text{
+  color: #FF00FF;
+}
+.giant-text{
+  font-size: 32px;
+  font-weight: 900;
+}
+.image{
+  height: auto;
+  width: 100%;
+  display: block;
+}
