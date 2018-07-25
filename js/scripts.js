@@ -1,59 +1,22 @@
-//day5-takehome
-function dogAge(ageOfDogYears) {
-  if(!isNaN(ageOfDogYears)){
-    return ageOfDogYears * 7;
-  }
-  else {
-    dogAge(parseInt(prompt("What is your dog's age in years?", "10")))
-  }
-};
-alert(dogAge(parseInt(prompt("What is your dog's age in years?", "10"))));
+//Let's try it out. Clone this  repository. Open it in Atom and create this basic HTML page, using only the methods you've learned. HINT: Know that the head tag itself can be very finniky, so create that statically (in HTML) and make the rest dynamically (with JS). Use Bootstrap helper classes to shorten your workload.
 
-//Takehome-day3
-let userName = prompt("What is your name?");
-let favColor = prompt("What is your favorite color?", "red, orange, yellow, green, blue, pink, purple, black, white, or grey");
-switch(favColor.toLowerCase()){
-  case 'pink':
-    alert(`Hi ${userName}, ${favColor} is fabulous!`);
-    break;
-  case 'red':
-    alert(`Hi ${userName}, ${favColor} is too bright for you.`);
-    break;
-  case 'orange':
-    alert(`Hi ${userName}, ${favColor} makes you look like a pumpkin.`);
-    break;
-  case 'yellow':
-    alert(`Hi ${userName}, ${favColor} makes you shine.`);
-    break;
-  case 'green':
-    alert(`Hi ${userName}, ${favColor} is the color of money.`);
-    break;
-  case 'blue':
-    alert(`Hi ${userName}, ${favColor} is calming.`);
-    break;
-  case 'purple':
-    alert(`Hi ${userName}, ${favColor} is the color of my favorite dress.`);
-    break;
-  case 'black':
-    alert(`Hi ${userName}, ${favColor} is a striking color.`);
-    break;
-  case 'white':
-    alert(`Hi ${userName}, ${favColor} is the color of my favorite dress shirt.`);
-    break;
-  case 'grey':
-    alert(`Hi ${userName}, ${favColor} is the new neutral.`);
-    break;
-  default:
-    alert(`Ummm ${userName}, you did not enter a valid color. Please try again.`);
-    break;
-}
+const body = document.querySelector("body");
+const header = document.createElement("header"); //navbar
+const div = document.createElement("div");// h1, p
+const footer = document.createElement("footer"); //facebook
 
-//Takehome-Day2
-let firstName = prompt("What is your first name?");
-console.log(firstName);
-let lastName = prompt("What is your last name?");
-alert(lastName);
-let birthday = prompt("What is your birthday?", new Date('10/6/1976'));
-confirm(`Is ${birthday} your birthday?`);
-alert(birthday);
+body.appendChild(header);
+header.innerHTML = "<a href='#' class='pull-left'>Home</a> <span class='pull-right'> <a href='#'>Contact</a> <a href='#'>About</a></span>";
+document.querySelector('a:nth-child(2)').style.paddingLeft= "20px";
+header.lastChild.style.paddingRight = "25px";
 
+
+body.appendChild(div);
+div.classList.add("container");
+div.style.paddingTop = "40px";
+div.style.height = "95vh";
+div.innerHTML = "<h1 class = 'text-center'>Hello World!</h1>   <p class = 'text-justify'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, officiis? Inventore similique molestiae eos a praesentium explicabo reprehenderit, est voluptates nulla ipsum temporibus quibusdam repudiandae consequatur sint itaque aperiam perferendis consectetur, fugiat dolor! Architecto ipsum ea tenetur dolor in dicta.</p>"
+
+body.appendChild(footer);
+footer.classList.add("text-center");
+footer.innerHTML = "<a href='https://www.facebook.com'>Friend us on FB</a>"
