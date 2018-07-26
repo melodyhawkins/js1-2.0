@@ -1,92 +1,103 @@
-//FUNCTIONS
-
-//Anonymous function - cannot refer to itself. Only runs once. Normally use in a callback. Good for the asynchronus nature of JS. plug in at a point where you know JS will call it itself.
-
-// Function Defintion - nothing will happen until we invoke the function.
+//Day 7 takehome
 /*
-function (string) { //inside the () is where your ARGUMENTS/PARAMETERS go.
-  return string.toUpperCase(); // Data transformation and return. As soon as JS sees the return statement it will complete that line of code and stop.
-  console.log(string);
-}; // End of function
+const body = document.querySelector("body");
+const script = document.querySelector("script");
+let header = document.createElement("header");
+let main = document.createElement("main");
+let footer = document.createElement("footer");
+//NAV
+let nav = document.createElement("ul");
+
+/*
+creates an li for the DOM.
+Expects a list of classes (array) and a string of text content.
+Returns newElement appended to Nav
+*/
+/*
+function createLi(classes, linkText) {
+  let newLink = document.createElement("li");
+  let aTag = document.createElement("a");
+  aTag.setAttribute("href", "#");
+  aTag.textConent = linkText;
+  newLink.appendChild(aTag);
+  for(let i = 0, i < classArray.length; i++) {
+    newLink.classList.add(classArray[i]);
+  };
+   nav.appendChild(newLink);
+};
+createLi(["pull-left"], ["active"], ["HOME"]);
+createLi(["pull-right"], ["CONTACT"]);
+createLi(["pull-right"], ["ABOUT"]);
+
+header.appendChild(nav);
+body.insertBefore(Header, script);
+
+letBodyDiv = document.createElement("div");
+bodyDiv.classList.add("col-sm-6", "col-sm-offset-3", "text-center");
+function createTextElement(elementType, text) {
+  let newElement = document.createElement(elementType);
+  newElement.textContent = text;
+  return newElement;
+};
+let h1 = createTextElement("h1", "Hello World!");
+let pTag = createTextElement("p", "Lorem" );
+pTag.className = "text-justify";
+bodyDiv.appendChild(h1);
+bodyDiv.appendChild(pTag);
+body.insertBefore(bodyDiv, script);
 */
 
-//Named Function - can run multiple times.
-//Function Defintion
-function addTwo(numberIWantToChange) {
-  return numberIWantToChange += 2;
-};
-//Call the FUNCTION
-console.log(addTwo(22)); //Call site. Define what num is.
+//FIZZBUZZ
+let body = document.querySelector("body");
+let script = document.querySelector("script");
 
-let myNewNumber = addTwo(34);
-console.log(addTwo(34));
+for(let i = 1; i <= 100; i++) {
+  let newP =document.createElement('p');
+  if(i % 3 === 0 && i % 5 === 0 ) {
+    newP.textContent ="FizzBuzz";
+  } else if (i % 3 === 0) {
+    newP.textContent = "Fizz";
+  } else if(i % 5 === 0) {
+    newP.textContent = "Buzz";
+  } else {
+    newP.textContent = i;
+  }
+  body.insertBefore(newP, script);
+}
 
-/***********************************************************************/
+//Take Home
+/*
+Write a program that does the following:
 
-function logMyString(string) {
-  console.log(string);
-};
-logMyString('JR is the best EVAAAR!!!!!!');
+1. When the user clicks a button, prompt them for the a title.
+2. Put that title into an h1 that is centered on the page.
+3. Ask the user to write a few sentences about what they did today.
+4. Populate a p tag with the sentences, align the p tag text with justify.
+5. Finally, ask the user for his or her favorite color, and set the background of the p tag to that color
+6. Remember, check for edge cases with color.
+*/
 
-function alertsAd() {
-  alert('Hey, we have a sale on Garthoks');
-};
-alertsAd();
-//the functions that return a value are assignable, those that do not will run the value and be done.?????? JS is asynchronus because it runs code out of order sometimes. Only certain types of functions get hoisted.
+//FORMS
+let loginForm = document.forms.login; //b/c we used name notation we can call it by .notation.
+let emailInput = loginForm.email;
 
-//Two types of Named Functions: Function declaration = get hoisted = if you call before defined, JS has already read them in and will run it  || and a function expression = where you assign a variable to an Anonymous function = does not get hoisted, even if you assigned a var variable.
+//? = after this = query parameter - asking the backend, given this data, give me back something I expect. 
+//& = separates the parameters
+//GET request = way to interact with a server - submit a request and expect a response. the assumption is that you are not actually sending parameters, you are just going to hit a specific URL and it will send you something. Ex. www.google.com. 
+//POST request= way to interact with a server - expects parameters, expects you to ask for something specific and to return something specific to you. Ex. logging into a website. 
 
-//FUNCTION DECLARATION (IS HOISTED)
+/*
+Today we begin the final project in earnest. As such, I won't be going over take homes anymore, they will all pertain directly to your final
 
-function alertsAd() {
-  alert('Hey, we have a sale on Garthoks!');
-};
-
-//FUNCTION EXPRESSION (NOT HOISTED)
-let confirmStuff = function(someString) {
-  let newVariable = "cheese";
-  confirm(someString);
-};
-// console.log(newVariable); // throws error of undefined newVariable.
-// confirmStuff("Do you want to watch Frozen?");
-
-//RECURSION
-let i = 0;
-function iCallMyself(){
-  console.log(i);
-  i++;
-  if(i < 10) iCallMyself();
-};
-iCallMyself();
-
-//FAT ARROW FUNCTIONS - new/better way to write Anonymous functions
-
-//BASIC IMPLEMENTATION
-(logFunction, alertFunction) => { //No function keyword
-  logFunction('hello world');
-  alertFunction('Goodbye friends!');
-};
-
-//ONLY 1 ARGUMENT - () are optional
-string => {
-  console.log(string);
-};
-
-//function expression - ONLY time fat arrow function can be named
-
-let logString = string => {
-  console.log(string);
-};
-
-// logString("Hello cats!");
-
-//IMPLICIT RETURN
-string => (string.toUpperCase()); //ANYTHING IN THE () SHOULD BE IMMEDIATELY RETURNED. ONLY WORKS IF HAVING ONE THING TO RETURN.
-string => string.toUpperCase(); // also correct
-
-//Day5 Try it out = takehome.
-
-//Day 5 Continued....
-//METHOD V. FUNCTION 
-//all methods are functions. not all functions are methods.
-//the method is connected to the objec. dx. console.log(); string.toUpperCase
+Create a new repository for your ToDo App if you have not already on GitHub and add me as a contributor.
+Begin coding your HTML and CSS
+At a minumum your HTML should contain:
+1. Two h1 tags with the titles of your lists ('todo' and 'done').
+2. An input for entering ToDo Items with a submit button.
+3. Two empty uls to hold the ToDo Items and the Done Items.
+Your JS should be able to:
+1. Access the input's value and the uls using DOM methods and store them in variables.
+2. When the submit button is clicked get the user input and add it to an array.
+3. Use whatever visual framework (or plain CSS styling) you like to make your page look good. Treat this like a product that you are building for a client. How would they want it to look and function?
+Remember, this is the basic setup, or just the beginning.
+*/
