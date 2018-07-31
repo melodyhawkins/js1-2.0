@@ -8,7 +8,15 @@
   <link rel="stylesheet" href="css/styles.css" type"text/css">
 </head>
 <body>
-
+  <form name = "userForm">
+    <label for="name">Name</label>
+    <input type="name" name = "name"> 
+    <label for="email">Email</label> 
+    <input type="email" name="email" required minlength="5">
+    <label for="password">Password</label>
+    <input type="password" name="password" required maxlength="6">
+    <button type="submit">login!!</button>
+  </form>
 <script src="js/scripts.js"></script>
 </body>
 </html>
