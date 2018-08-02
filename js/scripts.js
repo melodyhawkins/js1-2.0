@@ -34,7 +34,13 @@ let ryeker = new User("Ryeker", "best_teach@truth.com", "11111", [], []);
 ryeker.isAdmin=true; //dot notation
 ryeker["isAdmin"] = false; // bracket notation
 console.log(ryeker);
-
+User.prototype.calculateCartTotal = function() {
+  let total = 0;
+  this.cart.forEach(item => {
+    total += item.price;
+  });
+  return total;
+}
 //create three inputs for the form, email, password and name. When user clicks submit, try to build a new user out of what your user types into those three inputs. 
 
 const userForm = document.forms.userForm;
