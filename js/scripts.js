@@ -47,7 +47,7 @@ fetch('http://stapi.co/api/v1/rest/series/search').then(response => {
   console.log(jsonResult.series);
   starTrekSeries = jsonResult.series;
 }).catch( (err) => { console.log(err); }); // b/c this is a promise we use "then". 
-
+/*
 fetch('http://localhost:3456', {
   method: 'POST',
   mode: 'cors',
@@ -61,3 +61,9 @@ fetch('http://localhost:3456', {
 }).then(response => {
     console.log(response);
 });
+*/
+
+//CLOSURE = getting scope from child for parent. maintain reference in child scope and refer to that reference in an outer scope. 
+
+//CLASSES - can think of a class and a prototype as interchangable.
+
